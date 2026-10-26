@@ -7,19 +7,20 @@ C++ program (made for ubuntu/linux but also windows) that manages all your minec
 needs a C++17 compiler and CMake 3.16+
 
 > cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+
 > cmake --build build --config Release
 
 ## run
 
 > ./build/servermanager --dir /your/path/to/servers --port 8080
 
-then open `http://<this-pc-ip>:8080` from any device on your network.
+then open `http://<server-ip>:8080` from any device on your network.
 
 ## where things are stored
 
 - settings: `~/.config/servermanager/config.json` (on Windows `%APPDATA%\servermanager`; override with the `SERVERMANAGER_HOME` environment variable)
 - per-server settings (loader, version, memory, java): `~/.config/servermanager/servers/<server name>.json`
-- remembered detections: `~/.config/servermanager/detected.json`, so a server keeps its loader and version if its files later stop telling what it is
+- remembered options: `~/.config/servermanager/detected.json`, so a server keeps its loader and version if its files later stop telling it what it is
 
 ## notes
 
